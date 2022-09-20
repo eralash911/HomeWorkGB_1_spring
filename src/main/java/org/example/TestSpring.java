@@ -7,9 +7,9 @@ public class TestSpring {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("config.xml");
 
         //Human human = ctx.getBean("doBean", Human.class);
-        Hospital hospital = ctx.getBean("hospital", Hospital.class);
+        Hospital hosp = ctx.getBean("hosp", Hospital.class);
 
-        hospital.doSmth();
+        hosp.doSmth();
 
         ctx.close();
     }

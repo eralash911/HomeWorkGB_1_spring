@@ -10,6 +10,7 @@ public class TestSpring {
         Hospital hospital = ctx.getBean("hospital", Hospital.class);
 
         hospital.doSmth();
+
         ctx.close();
     }
 }

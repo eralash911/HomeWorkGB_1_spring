@@ -3,8 +3,12 @@ package org.example;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Hospital {
-    @Autowired
+    //@Autowired
     private Human human;
+
+    public Hospital(Human human) {
+        this.human = human;
+    }
 
     public void doSmth(){
         System.out.println("Do smth: " + human.goTo());

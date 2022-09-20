@@ -6,9 +6,11 @@ public class TestSpring {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("config.xml");
 
-        Human human = ctx.getBean("doBean", Human.class);
+        //Human human = ctx.getBean("doBean", Human.class);
+        Hospital hosp = ctx.getBean("hosp", Hospital.class);
 
-        System.out.println(human.goTo());
+        hosp.doSmth();
+
         ctx.close();
     }
 }

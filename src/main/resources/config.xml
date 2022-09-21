@@ -10,9 +10,9 @@
     <bean id="doBean"
           class="org.example.CheckSmth">
     </bean>
-    <bean id="hospital"
+    <bean id="hosp"
     class="org.example.Hospital">
-    <constructor-arg ref="doBean"/>
+        <property name="human" ref="doBean"/>
     </bean>
 
 </beans>

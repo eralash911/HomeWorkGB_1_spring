@@ -7,14 +7,24 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="classpath:hospital.properties"/>
+
     <bean id="doBean"
           class="org.example.CheckSmth">
     </bean>
+    <bean id="doBean1"
+          class="org.example.CheckSchedule">
+    </bean>
     <bean id="hosp"
     class="org.example.Hospital">
-        <property name="human" ref="doBean"/>
-        <property name="name" value="Some name"/>
-        <property name="vol" value="90"/>
+        <property name="humanList">
+            <list>
+                <ref bean="doBean1"/>
+                <ref bean="doBean"/>
+            </list>
+        </property>
+        <property name="name" value="${hospital.name}"/>
+        <property name="vol" value="${hospital.vol}"/>
     </bean>
 
 </beans>

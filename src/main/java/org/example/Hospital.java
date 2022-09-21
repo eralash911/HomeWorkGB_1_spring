@@ -2,11 +2,21 @@ package org.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Hospital {
+    private List<Human> humanList = new ArrayList<>();
+    
     //@Autowired
     private Human human;
     private String name;
     private  int vol;
+
+
+    public void setHumanList(List<Human> humanList) {
+        this.humanList = humanList;
+    }
 
     public String getName() {
         return name;
@@ -36,7 +46,10 @@ public class Hospital {
     }
 
     public void doSmth(){
-        System.out.println("Do smth: " + human.goTo());
+        for (Human h :
+                humanList) {
+            System.out.println("do: " + h.goTo());
+        }
     }
 
 

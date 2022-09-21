@@ -10,8 +10,8 @@ public class TestSpring {
         Hospital hosp = ctx.getBean("hosp", Hospital.class);
 
         hosp.doSmth();
-        System.out.println(hosp.getName());
-        System.out.println(hosp.getVol());
+//        System.out.println(hosp.getName());
+//        System.out.println(hosp.getVol());
 
         ctx.close();
     }

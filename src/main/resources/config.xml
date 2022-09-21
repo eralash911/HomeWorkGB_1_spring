@@ -13,6 +13,8 @@
     <bean id="hosp"
     class="org.example.Hospital">
         <property name="human" ref="doBean"/>
+        <property name="name" value="Some name"/>
+        <property name="vol" value="90"/>
     </bean>
 
 </beans>
